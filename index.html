@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>David Dang</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script type="text/x-handlebars">
+
+    <center><div class="ui hidden divider"></div>
+      <div class="ui buttons">
+        <div class="ui teal button">{{#link-to "portfolio" tagName="div"}}<i class="check square large icon"></i>{{/link-to}}</div>
+        <div class="ui teal button">{{#link-to "about" tagName="div"}} <i class="github alternate large icon"></i>{{/link-to}}</div>
+        <div class="ui teal button">{{#link-to "resume" tagName="div"}}<i class="file text large icon"></i>{{/link-to}}</div>
+      </div>
+    </center>
+
+    {{outlet}}
+  </script>
+
+
+
+  <script type="text/x-handlebars" id="about">
+    <center><h1>About</h1></center>
+
+        <center>
+          <div class="ui card">
+            <div class="image">
+              <img class="ui large circular image" src="octocat.jpg">
+            </div>
+            <div class="content">
+              <p class="header">Octocat</p>
+              <div class="description">
+                Octocat is an eight-legged feline. Despite appearing to be acclimated to water, he can't actually swim so usually opts to stand in puddles instead to overcompensate.
+              </div>
+              <div class="extra content">
+                <i class="github large blue icon"></i>
+              </div>
+            </div>
+          </div>
+        </center>
+
+  </script>
+
+
+
+  <script type="text/x-handlebars" id="portfolio">
+    <center><h1>Portfolio</h1></center>
+
+    <div class= "ui five column grid">
+
+      <div class ="column">
+      <div class="ui card">
+        <div class="image">
+          <img class="ui large circular image" src="jedi.jpg">
+        </div>
+        <div class="content">
+          <center><p class="header">Taught Luke how to do shit</p></center>
+        </div>
+      </div>
+    </div>
+
+      <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img class="ui large circular image" src="wolverine.jpg">
+        </div>
+        <div class="content">
+          <center><p class="header">Got comically overpowered</p></center>
+        </div>
+      </div>
+    </div>
+
+    <div class ="column">
+    <div class="ui card">
+      <div class="image">
+        <img class="ui large circular image" src="link.jpg">
+      </div>
+      <div class="content">
+        <center><p class="header">Became left handed for a while</p></center>
+      </div>
+    </div>
+  </div>
+
+      <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img class="ui large circular image" src="president.jpg">
+        </div>
+        <div class="content">
+          <center><p class="header">Founded 'Murrica</p></center>
+        </div>
+      </div>
+    </div>
+
+      <div class="column">
+      <div class="ui card">
+        <div class="image">
+          <img class="ui large circular image" src="walter.png">
+        </div>
+        <div class="content">
+          <center><p class="header">Made really pureass rock candy</p></center>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </script>
+
+
+
+  <script type="text/x-handlebars" id="resume">
+    <center><h1>Resume</h1></center>
+    <div class="ui segment">
+      <a class="ui ribbon red label">Work Experience</a>
+      <center>
+        <ul>World Savior <i class="calendar outline large icon"></i> 921 - 1973 AD </ul>
+        <ul>Founding Father <i class="calendar outline large icon"></i> 1973 - 1974 AD </ul>
+        <ul>Chemistry Teacher <i class="calendar outline large icon"></i> 2008 - 2013 AD</ul>
+        <ul>X-Man <i class="calendar outline large icon"></i> 2013 - 2014 AD</ul>
+        <ul>Jedi <i class="calendar outline large icon"></i> 3951 BBY - future</ul>
+      </center>
+
+    </div>
+  </script>
+
+
+
+
+
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="js/libs/ember-1.10.0.debug.js"></script>
+  <script src="js/app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="js/libs/semantic.min.css">
+  <script src="js/libs/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/libs/icon.css">
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>
