@@ -1,10 +1,10 @@
 App.Router.map(function(){
   this.route("about");
   this.route("resume");
-  this.route("portfolio");
-  this.route("project", {path: "/portfolio/:project_id"});
+  this.resource("portfolio", function(){
+    this.route("project", {path: "/:project_id"});
 });
-
+});
 
 App.PortfolioRoute = Ember.Route.extend({
   model: function(){
