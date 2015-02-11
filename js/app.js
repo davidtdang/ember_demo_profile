@@ -1,7 +1,7 @@
 App = Ember.Application.create();
 
 App.Router.map(function() {
-  this.route('home');
+  this.route('about');
   this.route('portfolio');
   this.route('resume');});
 
