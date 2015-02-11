@@ -47,67 +47,17 @@
 
 
   <script type="text/x-handlebars" id="portfolio">
-    <center><h1>Portfolio</h1></center>
+      <h1>portfolio</h1>
+      <ul>
+        {{#each project in model}}
+          <li>{{#link-to "project" project}}{{project.title}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+  </script>
 
-    <div class= "ui five column grid">
-
-      <div class ="column">
-      <div class="ui card">
-        <div class="image">
-          <img class="ui large circular image" src="jedi.jpg">
-        </div>
-        <div class="content">
-          <center><p class="header">Taught Luke how to do shit</p></center>
-        </div>
-      </div>
-    </div>
-
-      <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img class="ui large circular image" src="wolverine.jpg">
-        </div>
-        <div class="content">
-          <center><p class="header">Got comically overpowered</p></center>
-        </div>
-      </div>
-    </div>
-
-    <div class ="column">
-    <div class="ui card">
-      <div class="image">
-        <img class="ui large circular image" src="link.jpg">
-      </div>
-      <div class="content">
-        <center><p class="header">Became left handed for a while</p></center>
-      </div>
-    </div>
-  </div>
-
-      <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img class="ui large circular image" src="president.jpg">
-        </div>
-        <div class="content">
-          <center><p class="header">Founded 'Murrica</p></center>
-        </div>
-      </div>
-    </div>
-
-      <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img class="ui large circular image" src="walter.png">
-        </div>
-        <div class="content">
-
-          <center><p class="header">Made some pureass rock candy</p></center>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <script type="text/x-handlebars" id="project">
+    <h1>SHOW PAGE</h1>
+    <h1>{{title}}</h1>
   </script>
 
 
@@ -138,11 +88,13 @@
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/ember-template-compiler-1.10.0.js"></script>
   <script src="js/libs/ember-1.10.0.debug.js"></script>
-  <script src="js/app.js"></script>
 
   <link rel="stylesheet" type="text/css" href="js/libs/semantic.min.css">
   <script src="js/libs/semantic.min.js"></script>
   <link rel="stylesheet" type="text/css" href="js/libs/icon.css">
+  <script src="js/app.js"></script>
+  <script charset="utf-8" type="text/javascript" src="js/router.js"></script>
+
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
 </body>
