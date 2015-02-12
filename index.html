@@ -16,19 +16,21 @@
         <div class="ui teal button">{{#link-to "resume" tagName="div"}}<i class="file text large icon"></i>{{/link-to}}</div>
       </div>
     </center>
-
     {{outlet}}
   </script>
 
-
-
   <script type="text/x-handlebars" id="about">
-    <center><h1>About</h1></center>
-
+      <div class="ui mini statistics">
+        <center>
+        <div class="pink statistic">
+          <div class="value">About</div>
+        </div>
+      </center>
+      </div>
         <center>
           <div class="ui card">
             <div class="image">
-              <img class="ui large circular image" src="octocat.jpg">
+              <img class="ui large circular image" src="images/octocat.jpg">
             </div>
             <div class="content">
               <p class="header">Octocat</p>
@@ -36,47 +38,62 @@
                 Octocat is an eight-legged feline. Despite appearing to be acclimated to water, he can't actually swim so usually opts to stand in puddles instead to overcompensate.
               </div>
               <div class="extra content">
-                <i class="github large blue icon"></i>
+                <i class="github large purple icon"></i>
               </div>
             </div>
           </div>
         </center>
-
   </script>
 
-
-
   <script type="text/x-handlebars" id="portfolio">
-      <h1>Portfolio</h1>
-      <ul>
-        {{#each project in model}}
-          <li>{{#link-to "portfolio.project" project}}{{project.title}}{{/link-to}}</li>
-        {{/each}}
-      </ul>
+
+      <div class="ui mini statistics">
+        <center>
+        <div class="pink statistic">
+          <div class="value">Portfolio</div>
+        </div>
+      </center>
+      </div>
+      <center>
+        <div class="ui vertical buttons">
+          {{#each project in model}}
+            <div class="ui tiny purple button">{{#link-to "portfolio.project" project tagName="div"}}{{project.title}}{{/link-to}}</div>
+          {{/each}}
+        </div>
+      </center>
+      <p></p>
       {{outlet}}
   </script>
 
   <script type="text/x-handlebars" id="portfolio/project">
-    <div class="column">
-   <div class="ui card">
-     <div class="image">
-       <img {{bind-attr src=image}} alt="">
-     </div>
-     <div class="content">
-       <center><p class="header">{{title}}</p></center>
-     </div>
-   </div>
- </div>
+    <center>
+      <div class="column">
+        <div class="ui card">
+          <div class="image">
+            <img {{bind-attr src=image}} alt="">
+          </div>
+          <div class="content">
+            <center><p class="header">{{title}}</p></center>
+          </div>
+        </div>
+      </div>
+    </center>
   </script>
 
 
 
   <script type="text/x-handlebars" id="resume">
-    <center><h1>Resume</h1></center>
+    <div class="ui mini statistics">
+      <center>
+      <div class="pink statistic">
+        <div class="value">Resume</div>
+      </div>
+    </center>
+    </div>
     <div class="ui three column grid">
       <div class="three column"></div>
       <div class="ui segment column">
-        <a class="ui ribbon red label">Work Experience</a>
+        <a class="ui ribbon purple label">Work Experience</a>
           <ul><i class="calendar outline large icon"></i>0921 - 1973 AD Destined Savior</ul>
           <ul><i class="calendar outline large icon"></i>1973 - 1974 AD Founding Father</ul>
           <ul><i class="calendar outline large icon"></i>2008 - 2013 AD Chemistry Teacher</ul>
