@@ -47,56 +47,60 @@
 
 
   <script type="text/x-handlebars" id="portfolio">
-      <h1>portfolio</h1>
+      <h1>Portfolio</h1>
       <ul>
         {{#each project in model}}
           <li>{{#link-to "portfolio.project" project}}{{project.title}}{{/link-to}}</li>
         {{/each}}
       </ul>
-
-        {{outlet}}
-
+      {{outlet}}
   </script>
 
   <script type="text/x-handlebars" id="portfolio/project">
-    <h1>SHOW PAGE</h1>
-    <h1>{{title}}</h1>
+    <div class="column">
+   <div class="ui card">
+     <div class="image">
+       <img >
+     </div>
+     <div class="content">
+       <center><p class="header">{{title}}</p></center>
+     </div>
+   </div>
+ </div>
   </script>
 
 
 
   <script type="text/x-handlebars" id="resume">
     <center><h1>Resume</h1></center>
-
     <div class="ui three column grid">
       <div class="three column"></div>
-    <div class="ui segment column">
-      <a class="ui ribbon red label">Work Experience</a>
-
-        <ul><i class="calendar outline large icon"></i>0921 - 1973 AD Destined Savior</ul>
-        <ul><i class="calendar outline large icon"></i>1973 - 1974 AD Founding Father</ul>
-        <ul><i class="calendar outline large icon"></i>2008 - 2013 AD Chemistry Teacher</ul>
-        <ul><i class="calendar outline large icon"></i>2013 - 2014 AD X-man</ul>
-        <ul><i class="calendar outline large icon"></i>3951 BBY - ???? Jedi</ul>
-
-    </div>
+      <div class="ui segment column">
+        <a class="ui ribbon red label">Work Experience</a>
+          <ul><i class="calendar outline large icon"></i>0921 - 1973 AD Destined Savior</ul>
+          <ul><i class="calendar outline large icon"></i>1973 - 1974 AD Founding Father</ul>
+          <ul><i class="calendar outline large icon"></i>2008 - 2013 AD Chemistry Teacher</ul>
+          <ul><i class="calendar outline large icon"></i>2013 - 2014 AD X-man</ul>
+          <ul><i class="calendar outline large icon"></i>3951 BBY - ???? Jedi</ul>
+      </div>
     </div>
   </script>
 
 
 
 
-
-  <script src="js/libs/handlebars-v1.3.0.js"></script>
   <script src="js/libs/jquery-1.10.2.js"></script>
-  <script src="js/libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
   <script src="js/libs/ember-1.10.0.debug.js"></script>
-
+  <script src="js/libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="js/libs/semantic.min.css">
   <script src="js/libs/semantic.min.js"></script>
   <link rel="stylesheet" type="text/css" href="js/libs/icon.css">
   <script src="js/app.js"></script>
-  <script charset="utf-8" type="text/javascript" src="js/router.js"></script>
+  <script charset="utf-8" type="text/javascript" src="js/router/router.js"></script>
+  <script charset="utf-8" type="text/javascript" src="js/model/portfolio.js"></script>
 
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
